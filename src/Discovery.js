@@ -5,7 +5,7 @@ var ip = require('ip');
 var redis = require('redis');
 
 function Discovery(options) {
-  options.source = ip.address() + ':';
+  options.source = ip.address() + ':' + Math.floor(10000 + Math.random() * (65536 - 10000));
   Democracy.call(this, options);
   this.options.name = options.name || "iDiscovery-" + Math.random() * Date.now();
 }

@@ -54,7 +54,7 @@
   "description": "",
   "title": "",
   "name": "com.ctrip.component.iDiscovery",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "artifact": "component.iDiscovery",
   "group": "com.ctrip"
 }
