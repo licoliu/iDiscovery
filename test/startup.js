@@ -1,4 +1,4 @@
-var Discovery = require("./src/Discovery");
+var Discovery = require("../src/Discovery");
 
 var dem = new Discovery({
   name: "iDiscovery",
@@ -25,11 +25,10 @@ dem.on('leader', function(data) {
 });
 
 
-var self = this;
 process.on('exit', function() {
   dem.destroy();
 });
 
-setTimeout(function() {
-  process.exit()
-}, 3000)
+// setTimeout(function() {
+//   process.exit()
+// }, 10000)
