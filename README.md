@@ -1,9 +1,8 @@
-  
-# iDiscovery
-携程系统研发前端团队开发的node中间件，支持服务自动发现，服务间通信，自动推选master服务，master服务crash后自动重新推选可用的服务作为master服务，支持added，removed，elected等事件监听。
+# idiscovery
+node中间件，支持服务自动发现，自动注册，服务间通信，自动推选master服务，master服务crash后自动重新推选可用的服务作为master服务，支持added，removed，elected等事件监听。
 
 #### Requirements
-1. 
+1. requirements
     ```
     democracy >= 1.3.0 
     ip >= 1.1.5
@@ -12,17 +11,17 @@
  
 #### Usage
   
-1. requirements
+1. install
     ```
-    npm install com.ctrip.component.iDiscovery --save
+    $ npm install idiscovery --save
     ```
 
-2. 初始化
+2. initialize
     
     ```
-    var Discovery = require("com.ctrip.component.iDiscovery");
+    var Discovery = require("idiscovery");
     new Discovery({
-        name: 'iDiscovery' // Your current service name
+        name: 'idiscovery' // Your current service name
         interval: 1000, // The interval (ms) at which `hello` heartbeats are sent to the other peers.
         timeout: 3000, // How long a peer must go without sending a `hello` to be considered down.
         weight: Math.random() * Date.now() // The highest weight is used to determine the new leader. Must be unique for each node.
@@ -99,7 +98,7 @@
 
     执行install命令 
     ```
-        $ npm install com.ctrip.component.iDiscovery --save
+    $ npm install idiscovery --save
     
     ``` 
 
@@ -107,17 +106,17 @@
 
     
     ```
-        $ vi package.json
+    $ vi package.json
     ```
-    package.json文件，添加如下配置:
+    编辑package.json文件，添加如下配置:
     ```
-        dependencies: {
-            "com.ctrip.component.iDiscovery": "^0.0.1"
-        }
+    dependencies: {
+        "idiscovery": "^0.1.0"
+    }
     ```
     执行install命令 
     ```
-        $ npm install
+    $ npm install
     
     ``` 
 
@@ -126,7 +125,7 @@
 The below example is easy to run on your local machine (also found in the test directory).
 
 ```javascript
-var Discovery = require('com.ctrip.component.iDiscovery');
+var Discovery = require('idiscovery');
 
 var vote = new Discovery({
     name: "xxx",
